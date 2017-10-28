@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "321488197473",
+    "firebase_url": "https://librarymanagement-bb856.firebaseio.com",
+    "project_id": "librarymanagement-bb856",
+    "storage_bucket": "librarymanagement-bb856.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321488197473:android:e32f4ff0f10e606d",
+        "android_client_info": {
+          "package_name": "com.android.paritosh.librarymanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321488197473-591h7d1vnd05d4hbr3bl4eebsqn4kjb0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.paritosh.librarymanagement",
+            "certificate_hash": "37dec4af41fc22645b65ddc8969cf17e86a2425b"
+          }
+        },
+        {
+          "client_id": "321488197473-vfvf70ds0dg89bhqj61g7495k5am2u8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMRLz9M03V3LvtK1SGnvB1-WhKfu1QgU4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321488197473-vfvf70ds0dg89bhqj61g7495k5am2u8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

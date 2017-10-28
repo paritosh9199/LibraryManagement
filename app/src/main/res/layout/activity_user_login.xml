@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context="com.android.paritosh.librarymanagement.UserLoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:id="@+id/UserEmail"
+        android:text="user email" />
+
+    <EditText
+        android:id="@+id/nameUsr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Full Name" />
+
+    <EditText
+        android:id="@+id/hallUsr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Hall-Ticket " />
+
+    <Button
+        android:id="@+id/saveUsr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signoutUsr"
+            android:textAllCaps="true"
+            android:background="@drawable/selector"
+            android:text=" Logout " />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/valueUsr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+</LinearLayout>
