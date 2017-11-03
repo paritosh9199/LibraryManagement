@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(phrasesIntent);
     }
 
+    /*
     public void fac(View view) {
         // Create a new intent to open the {@link PhrasesActivity}
         Intent yoloIntent = new Intent(MainActivity.this, FacultyActivity.class);
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         // Start the new activity
         startActivity(yoloIntent);
     }
+    */
 
 
     public void Allog(View view) {

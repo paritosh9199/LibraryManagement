@@ -74,7 +74,7 @@
             android:background="@drawable/selector"
             android:gravity="center"
             android:onClick="logger"
-            android:text="student"
+            android:text="register"
             android:textAllCaps="true"
             android:textSize="25dp" />
 

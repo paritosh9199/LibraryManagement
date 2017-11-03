@@ -36,6 +36,7 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
     private FirebaseDatabase database;
+    private String displayName;
 
 
     @Override
@@ -49,6 +50,7 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
         for (UserInfo userInfo : user.getProviderData()) {
             if (displayName == null && userInfo.getDisplayName() != null) {
                 displayName = userInfo.getDisplayName();
+                email.setText("welcome " + displayName);
             }
         }
 
@@ -71,19 +73,11 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
             finish();
             startActivity(new Intent(UserLoginActivity.this, AllLoginActivity.class));
         }
-
-        /* set the username proto 1
-        Intent i = getIntent();
-        String n = i.getStringExtra("puzzle");
-
-        if(databaseReference.child(user.getUid()).getKey()==null) {
-            UserInformation userInformation = new UserInformation(n);
-            databaseReference.child(user.getUid()).setValue(userInformation);
+        if (displayName == null) {
+            displayName = user.getDisplayName();
         }
-        */
 
-
-        email.setText("welcome " + user.getDisplayName());
+        email.setText("welcome " + displayName);
     }
 
     @Override

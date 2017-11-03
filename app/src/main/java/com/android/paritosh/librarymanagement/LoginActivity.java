@@ -60,6 +60,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         login = (TextView) findViewById(R.id.logger);
         register = (Button) findViewById(R.id.register);
 
+        firebaseAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
         login.setOnClickListener(this);
         register.setOnClickListener(this);
 
@@ -68,8 +72,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void registerUser() {
 
-        String em = email.getText().toString().trim();
-        String pass = password.getText().toString().trim();
+        final String em = email.getText().toString().trim();
+        final String pass = password.getText().toString().trim();
         final String nameOfUser = nameUser.getText().toString().trim();
 
 
@@ -101,8 +105,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         progress.dismiss();
                         if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "registered succesfully", Toast.LENGTH_SHORT).show();
-                            finish();
+
                             //nameSetter();
+
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(nameOfUser).build();
+
+                            user.updateProfile(profileUpdates);
+                            firebaseAuth.signOut();
+
+
+                            //saveUserInformation();
+                            finish();
                             Intent n = new Intent(LoginActivity.this, AllLoginActivity.class);
                             //n.putExtra("name", nameOfUser);
                             startActivity(n);
@@ -145,6 +161,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         };
         */
 
+    }
+
+    private void saveUserInformation() {
+
+
+        String nameOfUser = nameUser.getText().toString().trim();
+        String em = email.getText().toString().trim();
+        String pass = password.getText().toString().trim();
+
+        UserInformation userInformation = new UserInformation(nameOfUser);
+
+        //
+        //
+        //
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        firebaseAuth.signInWithEmailAndPassword(em, pass);
+
+        if (firebaseAuth.getCurrentUser() != null) {
+            databaseReference.child(user.getUid()).setValue(userInformation);
+        }
+
+
+        Toast.makeText(this, "Information Saved", Toast.LENGTH_LONG).show();
     }
 
 

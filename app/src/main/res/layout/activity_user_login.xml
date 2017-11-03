@@ -16,6 +16,14 @@
         android:id="@+id/UserEmail"
         android:text="user email" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:id="@+id/Date"
+        android:text="date" />
+
     <EditText
         android:id="@+id/nameUsr"
         android:layout_width="match_parent"
@@ -37,6 +45,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SAVE" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="books" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="History" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="Serch books" />
 
     <LinearLayout
         android:layout_width="match_parent"
