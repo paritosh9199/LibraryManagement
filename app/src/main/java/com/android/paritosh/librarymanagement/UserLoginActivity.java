@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +41,17 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         setContentView(R.layout.activity_user_login);
+
+        String displayName = user.getDisplayName();
+
+        for (UserInfo userInfo : user.getProviderData()) {
+            if (displayName == null && userInfo.getDisplayName() != null) {
+                displayName = userInfo.getDisplayName();
+            }
+        }
+
 
         logout = (TextView) findViewById(R.id.signoutUsr);
         valueFromUser = (TextView) findViewById(R.id.valueUsr);
@@ -61,9 +72,18 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
             startActivity(new Intent(UserLoginActivity.this, AllLoginActivity.class));
         }
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        /* set the username proto 1
+        Intent i = getIntent();
+        String n = i.getStringExtra("puzzle");
 
-        email.setText("welcome " + user.getEmail());
+        if(databaseReference.child(user.getUid()).getKey()==null) {
+            UserInformation userInformation = new UserInformation(n);
+            databaseReference.child(user.getUid()).setValue(userInformation);
+        }
+        */
+
+
+        email.setText("welcome " + user.getDisplayName());
     }
 
     @Override

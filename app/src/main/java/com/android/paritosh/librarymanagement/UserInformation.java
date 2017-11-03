@@ -12,6 +12,10 @@ public class UserInformation {
 
     }
 
+    public UserInformation(String name) {
+        this.name = name;
+        //this.halltckt = halltckt;
+    }
     public UserInformation(String name, String halltckt) {
         this.name = name;
         this.halltckt = halltckt;
