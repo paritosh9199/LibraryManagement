@@ -58,12 +58,11 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
         logout = (TextView) findViewById(R.id.signoutUsr);
         valueFromUser = (TextView) findViewById(R.id.valueUsr);
         email = (TextView) findViewById(R.id.UserEmail);
-        name = (EditText) findViewById(R.id.nameUsr);
-        halltckt = (EditText) findViewById(R.id.hallUsr);
-        saveInfo = (Button) findViewById(R.id.saveUsr);
+        //name = (EditText) findViewById(R.id.nameUsr);
+        //halltckt = (EditText) findViewById(R.id.hallUsr);
+        //saveInfo = (Button) findViewById(R.id.saveUsr);
 
         logout.setOnClickListener(this);
-        saveInfo.setOnClickListener(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -88,9 +87,7 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
             startActivity(new Intent(this, AllLoginActivity.class));
         }
 
-        if (view == saveInfo) {
-            saveUserInformation();
-        }
+
     }
 
     private void saveUserInformation() {
@@ -104,6 +101,21 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
         databaseReference.child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this, "Information Saved", Toast.LENGTH_LONG).show();
+    }
+
+    public void books(View view) {
+        Intent intent = new Intent(UserLoginActivity.this, BooksActivity.class);
+        startActivity(intent);
+    }
+
+    public void history(View view) {
+        Intent intent = new Intent(UserLoginActivity.this, historyActivity.class);
+        startActivity(intent);
+    }
+
+    public void search(View view) {
+        Intent intent = new Intent(UserLoginActivity.this, searchActivity.class);
+        startActivity(intent);
     }
 
 

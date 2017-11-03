@@ -25,7 +25,9 @@
             android:name=".LoginActivity"
             android:label="Register" />
         <activity android:name=".BooksActivity" />
-        <activity android:name=".UserLoginActivity"></activity>
+        <activity android:name=".UserLoginActivity" />
+        <activity android:name=".historyActivity" />
+        <activity android:name=".searchActivity"></activity>
     </application>
 
 </manifest>
