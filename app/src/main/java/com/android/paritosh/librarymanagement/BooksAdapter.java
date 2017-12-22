@@ -4,8 +4,6 @@ package com.android.paritosh.librarymanagement;
  * Created by PARITOSH on 11/10/2017.
  */
 
-import android.content.Context;
-import android.view.View;/*
 import android.app.Activity;
 import android.content.Context;
 import android.view.View;
@@ -14,42 +12,35 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class BooksAdapter extends ArrayAdapter<FriendlyMessage> {
-    public MessageAdapter(Context context, int resource, List<FriendlyMessage> objects) {
+public class BooksAdapter extends ArrayAdapter<BooksKeeper> {
+    public BooksAdapter(Context context, int resource, List<BooksKeeper> objects) {
         super(context, resource, objects);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.item_message, parent, false);
+            //convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.item_message, parent, false);
         }
-
-        ImageView photoImageView = (ImageView) convertView.findViewById(R.id.photoImageView);
+        /*
         TextView messageTextView = (TextView) convertView.findViewById(R.id.messageTextView);
         TextView authorTextView = (TextView) convertView.findViewById(R.id.nameTextView);
+        */
 
-        FriendlyMessage message = getItem(position);
+        BooksKeeper message = getItem(position);
 
-        boolean isPhoto = message.getPhotoUrl() != null;
-        if (isPhoto) {
-            messageTextView.setVisibility(View.GONE);
-            photoImageView.setVisibility(View.VISIBLE);
-            Glide.with(photoImageView.getContext())
-                    .load(message.getPhotoUrl())
-                    .into(photoImageView);
-        } else {
+
+
+        /*
             messageTextView.setVisibility(View.VISIBLE);
             photoImageView.setVisibility(View.GONE);
-            messageTextView.setText(message.getText());
-        }
-        authorTextView.setText(message.getName());
+            //messageTextView.setText(message.getText());
+         */
+        //authorTextView.setText(message.getName());
 
         return convertView;
     }
 }
-*/

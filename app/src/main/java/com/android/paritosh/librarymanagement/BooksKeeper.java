@@ -1,56 +1,61 @@
 package com.android.paritosh.librarymanagement;
 
 /**
- * Created by PARITOSH on 11/10/2017.
+ * Created by PARITOSH on 12/20/2017.
  */
 
-/*
 
 public class BooksKeeper {
 
-    private String text;
-    private String name;
-    private String photoUrl;
+    private String book;
+    private String author;
+    private int TimeStampStart,TimeStampEnd;
 
-    public FriendlyMessage() {
+    public BooksKeeper() {
         //damn..i m fucked!!
     }
 
-    /* public FriendlyMessage(String text, String name, String photoUrl) {
-        this.text = text;
-        this.name = name;
-        this.photoUrl = photoUrl;
+    public BooksKeeper(String book, String author, int TimeStamp) {
+        this.book = book;
+        this.author = author;
+        this.TimeStampStart = TimeStampStart;
     }
 
-    public FriendlyMessage(String text, String name) {
-        this.text = text;
-        this.name = name;
+    public BooksKeeper(String book, String author) {
+        this.book = book;
+        this.author = author;
     }
 
-    public String getText() {
-        return text;
+    public String getBook() {
+        return book;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setbook(String book) {
+        this.book = book;
     }
 
-    public String getName() {
-        return name;
+    public String getauthor() {
+        return author;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setauthor(String author) {
+        this.author = author;
     }
 
-    public String getPhotoUrl() {
-        return photoUrl;
+    public int getTimeStampStart() {
+        return TimeStampStart;
     }
 
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
+    public void setTimeStampStart(int TimeStampStart) {
+        this.TimeStampStart = TimeStampStart;
+    }
+
+    public int getTimeStampEnd() {
+        return TimeStampEnd;
+    }
+
+    public void setTimeStampEnd(int TimeStampEnd) {
+        this.TimeStampEnd = TimeStampEnd;
     }
 }
 
-
-*/
