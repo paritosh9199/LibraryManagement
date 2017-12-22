@@ -19,7 +19,9 @@ public class BooksAdapter extends ArrayAdapter<BooksKeeper> {
     public BooksAdapter(Context context, int resource, List<BooksKeeper> objects) {
         super(context, resource, objects);
     }
+}
 
+    /*
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
@@ -30,7 +32,7 @@ public class BooksAdapter extends ArrayAdapter<BooksKeeper> {
         TextView authorTextView = (TextView) convertView.findViewById(R.id.nameTextView);
         */
 
-        BooksKeeper message = getItem(position);
+        //BooksKeeper message = getItem(position);
 
 
 
@@ -41,6 +43,6 @@ public class BooksAdapter extends ArrayAdapter<BooksKeeper> {
          */
         //authorTextView.setText(message.getName());
 
-        return convertView;
-    }
-}
+        //return convertView;
+
+//}
