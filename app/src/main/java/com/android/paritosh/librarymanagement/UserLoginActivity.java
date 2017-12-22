@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -77,6 +79,29 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
         }
 
         email.setText("welcome " + displayName);
+    }
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.log_out, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.logout_menu:
+
+
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(this, AllLoginActivity.class));
+
+        }
+        return true;
     }
 
     @Override
