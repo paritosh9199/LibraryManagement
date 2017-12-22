@@ -1,8 +1,14 @@
-# LibraryManagement
+# LibraryManagement LibryEd
 
-welcome to LibryEd hahah
+welcome to LibryEd
 
-## we are a group of noobs who are trying to bring some change into this world...
+#### we are a group of noobs who are trying to bring some change into this world...
+
+### created by:
+1.Paritosh
+2.Kaushik
+3.vinay
 
 
-###### [the apk is available at](google.com/cajdcuua)
+*THE PROJECT IS UNDER DEVELOPMENT*
+
